@@ -18,7 +18,7 @@ protected:
     void keyPressEvent(QKeyEvent *);
     void closeEvent(QCloseEvent *);
     void mousePressEvent(QMouseEvent *);
-
+    bool eventFilter(QObject *, QEvent *);
 private:
     Ui::Widget *ui;
 };
