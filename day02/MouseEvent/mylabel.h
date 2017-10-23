@@ -13,6 +13,8 @@ protected:
     void mouseMoveEvent(QMouseEvent * me) ;
     void mousePressEvent(QMouseEvent * me) ;
     void mouseReleaseEvent(QMouseEvent * me) ;
+    void enterEvent(QEvent *);
+    void leaveEvent(QEvent *);
 signals:
 
 public slots:

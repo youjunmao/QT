@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         widget.cpp \
-    mylabel.cpp
+    mylabel.cpp \
+    mypushbutton.cpp
 
 HEADERS  += widget.h \
-    mylabel.h
+    mylabel.h \
+    mypushbutton.h
 
 FORMS    += widget.ui
 

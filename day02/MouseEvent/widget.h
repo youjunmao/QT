@@ -14,7 +14,10 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
-
+protected:
+    void keyPressEvent(QKeyEvent *);
+    void closeEvent(QCloseEvent *);
+    void mousePressEvent(QMouseEvent *);
 
 private:
     Ui::Widget *ui;

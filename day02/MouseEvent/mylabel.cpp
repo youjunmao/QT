@@ -39,3 +39,11 @@ void MyLabel::mouseReleaseEvent(QMouseEvent * me)
     QString text=QString("<center><h1>Mouse Release:(%1,%2)</h1></center>").arg(me->x()).arg(me->y());
     this->setText(text);
 }
+void MyLabel::enterEvent(QEvent *)
+{
+
+}
+void MyLabel::leaveEvent(QEvent *)
+{
+
+}
