@@ -9,8 +9,8 @@ Widget::Widget(QWidget *parent) :
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
-    //writeData();
-    readData();
+    writeData();
+    //readData();
 }
 
 void Widget::writeData()
