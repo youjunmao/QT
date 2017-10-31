@@ -15,8 +15,13 @@ public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
 protected:
+    //窗口绘图事件
     void paintEvent(QPaintEvent *);
+private slots:
+    void on_pushButton_clicked();
+
 private:
+    int x;
     Ui::Widget *ui;
 };
 

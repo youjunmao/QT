@@ -3,11 +3,13 @@
 #include<QPainter>
 #include<QPen>
 #include<QBrush>
+#include<QPixmap>
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    x=0;
 }
 
 void Widget::paintEvent(QPaintEvent *)
@@ -42,6 +44,8 @@ void Widget::paintEvent(QPaintEvent *)
     p.drawRect(150,150,100,150);
     //画圆形
     p.drawEllipse(QPoint(150,150),50,25);
+    //
+    p.drawPixmap(x,100,60,60,QPixmap("../IMAGE/timg.jpg"));
 
     p.end();
 
@@ -51,4 +55,14 @@ void Widget::paintEvent(QPaintEvent *)
 Widget::~Widget()
 {
     delete ui;
+}
+
+void Widget::on_pushButton_clicked()
+{
+    x+=20;
+    if(x>width())
+    {
+        x=0;
+    }
+    update();//刷新整个窗口，间接调用paintEvent(QPaintEvent *)
 }
